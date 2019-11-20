@@ -1,17 +1,18 @@
 import * as express from "express";
 import * as mongoose from "mongoose";
 import { config } from "dotenv";
+import appRoutes from "./routes";
 
+// configure environment variables
 config();
-// const env = require("dotenv").config();
 
-const routes = require("./routes");
+const routes: express.Router = appRoutes;
 
 // Constants
-const PORT = process.env.PORT || 8080;
-const HOST = "0.0.0.0";
+const PORT: number = parseInt(process.env.PORT) || 8080;
+const HOST: string = "0.0.0.0";
 
-const app = express();
+const app: express.Application = express();
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));

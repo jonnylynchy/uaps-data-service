@@ -6,4 +6,4 @@ let router: express.Router;
 router = express.Router();
 router.use("/api", apiRoutes);
 
-module.exports = router;
+export default router;
