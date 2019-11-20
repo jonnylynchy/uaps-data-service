@@ -1,5 +1,9 @@
-const router = require("express").Router();
-const sightingsController = require("../../controllers/sightingsController");
+import * as express from "express";
+
+import sightingsController from "../../controllers/sightingsController";
+
+let router: express.Router;
+router = express.Router();
 
 // Matches with "/api/sightings"
 router
@@ -14,4 +18,4 @@ router
   .put(sightingsController.update)
   .delete(sightingsController.remove);
 
-module.exports = router;
+export default router;

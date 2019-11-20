@@ -1,4 +1,5 @@
-const mongoose = require("mongoose");
+import * as mongoose from "mongoose";
+
 const Schema = mongoose.Schema;
 
 const sightingSchema = new Schema({
@@ -12,4 +13,4 @@ const sightingSchema = new Schema({
 
 const Sighting = mongoose.model("Sighting", sightingSchema);
 
-module.exports = Sighting;
+export default Sighting;

@@ -1,7 +1,7 @@
-const db = require("../models");
+import db from "../models";
 
 // Defining methods for the sightingsController
-module.exports = {
+export default {
   findAll: function(req, res) {
     db.Sighting.find(req.query)
       .sort({ date: -1 })

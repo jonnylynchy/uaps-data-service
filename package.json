@@ -4,12 +4,21 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "tsc",
+    "dev": "ts-node index.ts",
+    "start": "nodemon ./dist/index.js",
+    "prod": "yarn build && yarn start",
+    "format": "prettier-standard '**/*.ts'",
     "test": "mocha"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@types/express": "^4.17.2",
+    "@types/mocha": "^5.2.7",
+    "@types/mongoose": "^5.5.32",
+    "@types/node": "^12.12.11",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "mongoose": "^5.7.11"
