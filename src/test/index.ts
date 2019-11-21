@@ -1,7 +1,9 @@
-import * as mongoose from "mongoose";
 import { config } from "dotenv";
+import * as mongoose from "mongoose";
 
-(<mongoose.Mongoose>mongoose).Promise = global.Promise;
+process.env.NODE_ENV = "test";
+
+(mongoose as mongoose.Mongoose).Promise = global.Promise;
 config();
 
 const testConnection = process.env.MONGODB_TEST_CONNSTR;

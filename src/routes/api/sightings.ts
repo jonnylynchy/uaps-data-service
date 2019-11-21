@@ -5,13 +5,13 @@ import sightingsController from "../../controllers/sightingsController";
 let router: express.Router;
 router = express.Router();
 
-// Matches with "/api/sightings"
+// /api/sightings
 router
   .route("/")
   .get(sightingsController.findAll)
   .post(sightingsController.create);
 
-// Matches with "/api/sightings/:id"
+// /api/sightings/:id
 router
   .route("/:id")
   .get(sightingsController.findById)

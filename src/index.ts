@@ -32,3 +32,5 @@ mongoose
     console.log(`Running on http://${HOST}:${PORT}`);
   })
   .catch(err => console.error(err));
+
+export default app;

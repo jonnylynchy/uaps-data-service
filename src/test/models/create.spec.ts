@@ -1,5 +1,5 @@
 import assert = require("assert");
-import Sighting from "../models/sighting";
+import Sighting from "../../models/sighting";
 
 describe("Creating records", () => {
   it("saves a sighting", done => {
